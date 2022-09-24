@@ -17,3 +17,7 @@
 .icon{
     font-size:80px !important;
 }
+
+#btn:hover{
+    cursor: pointer;
+}
