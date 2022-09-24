@@ -1,4 +1,6 @@
-
+body{
+    background : rgba(0,0,0,1) !important;
+}
 
 #playground{
     width:100vw !important;
@@ -20,4 +22,9 @@
 
 #btn:hover{
     cursor: pointer;
+}
+
+#main{
+    width:100vw !important;
+    height:100vh !important;
 }
