@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import getInitialBoard from "../utils/getInitialBoard";
 import {Board} from "../components/Board";
 import swal from "sweetalert";
-import getInitialHistory from "../utils/getInitialHistory";
 import {decideWinner, hasDecidedWinner} from "../utils/strategies/decideWinner";
 
 export function PLayPage(){

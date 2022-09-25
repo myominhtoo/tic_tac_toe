@@ -1,3 +1,40 @@
 {
-  "users" : []
+  "users": [
+    {
+      "id": 1,
+      "name": "lionel",
+      "email": "lionel@gmail.com",
+      "password": "YkdsdmJtVnM=",
+      "records": {
+        "win": 0,
+        "lose": 0,
+        "draw": 0
+      },
+      "rate": 0
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "ZEdWemRHVnk=",
+      "records": {
+        "win": 0,
+        "lose": 0,
+        "draw": 0
+      },
+      "rate": 0
+    },
+    {
+      "id": 3,
+      "name": "Mike",
+      "email": "mike@gmail.com",
+      "password": "YldsclpRPT0=",
+      "records": {
+        "win": 0,
+        "lose": 0,
+        "draw": 0
+      },
+      "rate": 0
+    }
+  ]
 }
