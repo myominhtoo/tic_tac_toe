@@ -4,7 +4,6 @@
  isO - boolean ( O or X)
  byWho - string ( id )
  */
-import {useEffect} from "react";
 
 export function Box(props ){
 
@@ -15,7 +14,7 @@ export function Box(props ){
     }
 
     return (
-       <div onClick={() => handleClickBox( position ) } className='bg-gray p-3 col-xl-3 rounded-3 d-flex justify-content-center align-items-center' id='box'>
+       <div onClick={() => handleClickBox( position ) } className='bg-gray p-3 col-xl-3 col-none-1 rounded-3 d-flex justify-content-center align-items-center' id='box'>
            {
                hasChecked &&
                (
