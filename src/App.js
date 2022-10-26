@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useCallback , useState} from "react";
 import getInitialBoard from "./utils/getInitialBoard";
 import {Board} from "./components/Board";
 import swal from "sweetalert";
@@ -6,16 +6,17 @@ import {decideWinner, hasDecidedWinner} from "./utils/strategies/decideWinner";
 
 function App() {
 
-  const [ players , setPlayers ] = useState([
-    {
-        id : 1,
-        name : 'O'
-    },
-    {
-        id : 2,
-        name : 'X'
-    }
-  ]);
+      const players = [
+        {
+            id : 1,
+            name : 'O'
+        },
+        {
+            id : 2,
+            name : 'X'
+        }
+      ]
+
 
       const [ turn , setTurn ] = useState(0);
 
@@ -51,6 +52,7 @@ function App() {
           }
 
       }
+
 
       const canClickTargetBox = ( target = 0 ) => {
           let hasTargetChecked = board[target].hasChecked;
@@ -96,12 +98,22 @@ function App() {
           });
       }
 
-      useEffect(() => {
+      
+      const checkWinner = useCallback(() => {
         let winner = decideWinner(board);
         if( hasDecidedWinner(winner) ){
           handleGameOver( winner );
         }
-      },[board])
+        } , [board]);
+
+        checkWinner();
+
+    //   useEffect(() => {
+    //     let winner = decideWinner(board);
+    //     if( hasDecidedWinner(winner) ){
+    //       handleGameOver( winner );
+    //     }
+    //   },[board])
 
     return (
         <main className='container-fluid d-flex justify-content-center flex-column  align-items-center' id='playground'>

@@ -7,7 +7,7 @@
 
 export function Box(props ){
 
-    const { position , checkedBy , hasChecked , handleClick , turn  } = props;
+    const { position , checkedBy , hasChecked , handleClick   } = props;
 
     const handleClickBox = ( target ) => {
         handleClick( target );
@@ -18,7 +18,7 @@ export function Box(props ){
            {
                hasChecked &&
                (
-                   checkedBy == 0
+                   checkedBy === 0
                    ? < i className="fa-solid fa-o h1 text-primary icon"></i>
                    : <i className="fa-solid fa-xmark h1 text-danger icon"></i>
                )
